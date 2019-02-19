@@ -101,7 +101,7 @@
 			background: #FFFFFF;
 			margin-right: 10px;
 			text-align: center;
-			box-shadow: 16px 3px 10px -16px #000;
+			/* box-shadow: 16px 3px 10px -16px #000; */
 		}
 		#middle {
 			background: #FFFFFF;
@@ -110,9 +110,8 @@
 		}
 		#right {
 			background: #FFFFFF;
-			text-align: right;
 			text-align: center;
-			box-shadow: -16px 3px 10px -16px #000;
+			/* box-shadow: -16px 3px 10px -16px #000; */
 		}
 		#footer {
 		    width: 100%;
@@ -122,6 +121,10 @@
 			z-index: 1;
 		    text-align: center;
 			box-shadow: 0 -10px 10px -10px #000;
+		}
+		#footer a {
+	        position: relative;
+			left: -26px;
 		}
 
 	</style>
@@ -177,14 +180,18 @@
 		</div>
 	</div>
 
-	<div class="layui-row">
 	<div class="layui-row" id="footer">
 		<div class="layui-col-md12">
 		  	<div class="layui-row row">
-				<a>我是版权信息</a>
+				<a id="b">我是版权信息</a>
 			</div>
 		</div>
 	</div>
 </body>
 <script src="/static/index/js/layui/layui.js" type="text/javascript" charset="utf-8" async defer></script>
+<script type="text/javascript">
+	window.onload = function(e) {
+		document.querySelector('html').style.height = window.screen.availHeight + 'px';
+	}
+</script>
 </html>
