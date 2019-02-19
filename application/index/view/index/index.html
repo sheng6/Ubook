@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/static/index/js/layui/css/layui.css">
+	<style>
+		body {
+			padding: 20px;
+			margin: 0px;
+		}
+		#header {
+			height: 80px;
+			margin-right: 10px;
+			background: #FFFFFF;
+			box-shadow: 0 10px 10px -10px #000;
+		    margin-bottom: 10px;
+		}
+		#logo {
+			height: 100%;
+		}
+		#logo h1 {
+		  	position: absolute;
+		    top: 50%;
+	        left: 50%;
+		    transform: translateY(-50%);
+		}
+		#other {
+			height: 100%;
+		}
+		#other ul {
+		  	list-style: none;
+			height: 100%;
+		    text-align: right;
+		}
+		#other ul li {
+  	        display: inline;
+		}
+		#other ul li a {
+	        margin-right: 30px;
+	        display: inline-block;
+	        position: relative;
+	        height: 30px;
+	        padding: 10px 20px 0 20px;
+	        text-align: center;
+	        background-color: #000000;
+	        color: #fff;
+	        text-decoration: none;
+	        font-size: 15px;
+         	outline: none;
+         	transform: translateY(50%);
+		}
+		#other ul li a:after{
+	        content: "";
+	        border-left: 20px solid #000000;
+	        border-top: 20px solid transparent;
+	        border-bottom: 20px solid transparent;
+	        position: absolute;
+	        right: -20px;
+	        top: 0;
+	    }
+     	#other ul li a:before{
+	        content: "";
+	        border-top: 20px solid #000000;
+	        border-bottom: 20px solid #000000;
+	        border-left: 20px solid transparent;
+	        position: absolute;
+	        top: 0;
+	        left: -20px;
+	  	}
+	  	#other ul li:first-child a{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        #other ul li:first-child a:before{
+            display: none;
+        }
+        #other ul li:last-child a{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #other ul li:last-child a:after{
+            display: none;
+        }
+  	 	#other ul li a:hover{
+            background-color:#fa5ba5;
+        }
+        #other ul li a:hover:after{
+            border-left-color: #fa5ba5;
+        }
+        #other ul li a:hover:before{
+            border-top-color: #fa5ba5;
+            border-bottom-color: #fa5ba5;
+        }
+        .row {
+			padding: 10px;
+			margin-top: 20px;
+			border: 0px solid #000;
+        }
+		#left {
+			background: #FFFFFF;
+			margin-right: 10px;
+			text-align: center;
+			box-shadow: 16px 3px 10px -16px #000;
+		}
+		#middle {
+			background: #FFFFFF;
+			margin-right: 10px;
+			text-align: center;
+		}
+		#right {
+			background: #FFFFFF;
+			text-align: right;
+			text-align: center;
+			box-shadow: -16px 3px 10px -16px #000;
+		}
+		#footer {
+		    width: 100%;
+			height: 80px;
+			position: fixed;
+			bottom: 0px;
+			z-index: 1;
+		    text-align: center;
+			box-shadow: 0 -10px 10px -10px #000;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="layui-row" id="header">
+		<div class="layui-col-md2" id="logo">
+		<h1>U书签</h1>
+		</div>
+		<div class="layui-col-md10" id="other">
+			<ul>
+				<li><a>同行书签</a></li>
+				<li><a>搜索</a></li>
+				<li><a>消息</a></li>
+				<li><a>个人中心</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="layui-col-md2" id="left">
+	  	<div class="layui-row row">
+			<a>分类</a>
+	  	</div>
+  		<div class="layui-row row">
+			<a>分类1</a>
+	  	</div>
+	  	<div class="layui-row row">
+			<a>分类2</a>
+	  	</div>
+	  	<div class="layui-row row">
+			<a>分类3</a>
+	  	</div>
+	</div>
+
+	<div class="layui-col-md7" id="middle">
+	  	<div class="layui-row row">
+			<a>内容</a>
+	  	</div>
+	  	<div class="layui-row row">
+			<a>内容1</a>
+	  	</div>
+	  	<div class="layui-row row">
+			<a>内容2</a>
+	  	</div>
+	</div>
+
+	<div class="layui-col-md2" id="right">
+	  	<div class="layui-row row">
+			<a>右侧</a>
+		</div>
+		<div class="layui-row row">
+			<a>右侧1</a>
+		</div>
+	</div>
+
+	<div class="layui-row">
+	<div class="layui-row" id="footer">
+		<div class="layui-col-md12">
+		  	<div class="layui-row row">
+				<a>我是版权信息</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="/static/index/js/layui/layui.js" type="text/javascript" charset="utf-8" async defer></script>
+</html>
