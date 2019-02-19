@@ -15,6 +15,9 @@
 			background: #FFFFFF;
 			box-shadow: 0 10px 10px -10px #000;
 		    margin-bottom: 10px;
+	        position: fixed;
+		    width: 100%;
+		    z-index: 1;
 		}
 		#logo {
 			height: 100%;
@@ -98,17 +101,20 @@
 			border: 0px solid #000;
         }
 		#left {
+			top: 80px;
 			background: #FFFFFF;
 			margin-right: 10px;
 			text-align: center;
 			/* box-shadow: 16px 3px 10px -16px #000; */
 		}
 		#middle {
+			top: 80px;
 			background: #FFFFFF;
 			margin-right: 10px;
 			text-align: center;
 		}
 		#right {
+			top: 80px;
 			background: #FFFFFF;
 			text-align: center;
 			/* box-shadow: -16px 3px 10px -16px #000; */
@@ -132,6 +138,11 @@
 		    transform: translate(-50%, -50%);
 		}
 
+		.end {
+		    position: fixed;
+		    bottom: 130px;
+		    left: 25px;
+		}
 	</style>
 </head>
 <body>
@@ -162,6 +173,12 @@
 	  	<div class="layui-row row">
 			<a>分类3</a>
 	  	</div>
+	  	<div class="layui-row row">
+			<a>新建分类</a>
+	  	</div>
+	  	<div class="layui-row row end">
+			<a>回收站</a>
+	  	</div>
 	</div>
 
 	<div class="layui-col-md7" id="middle">
@@ -176,7 +193,7 @@
 	  	</div>
 	</div>
 
-	<div class="layui-col-md2" id="right">
+	<div class="layui-col-md1" id="right">
 	  	<div class="layui-row row">
 			<a>右侧</a>
 		</div>
