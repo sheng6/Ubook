@@ -3,7 +3,7 @@
 namespace app\index\controller;
 
 use think\Controller;
-use app\index\model\index as indexm;
+use app\index\model\Index as indexm;
 
 class Index extends Controller
 {
