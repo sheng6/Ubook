@@ -159,6 +159,8 @@
 			border-radius: 25px;
 			border: 1px solid #000;
 			width: 130px;
+			padding: 10px;
+			margin:  10px;
 		}
 		#center li a {
 			padding: 20px 30px;
@@ -200,13 +202,11 @@
 	  	<div class="layui-row row borderrow">
 			<a class="bookstitle">{$value['cate_name']}</a>
 			<!-- {foreach $value['bookmarks'] as $k => $v} -->
-			<div>
-				<ul id="center">
-					<li>
-						<a href="http://{$v['book_link']}" title="{$v['book_intro']}" target="_blank">{$v['book_name']}</a>
-					</li>
-				</ul>
-			</div>
+			<ul id="center">
+				<li>
+					<a href="http://{$v['book_link']}" title="{$v['book_intro']}" target="_blank">{$v['book_name']}</a>
+				</li>
+			</ul>
   			<!-- {/foreach} -->
 	  	</div>
 	  	<!-- {/foreach} -->
