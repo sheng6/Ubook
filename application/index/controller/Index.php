@@ -3,13 +3,13 @@
 namespace app\index\controller;
 
 use think\Controller;
-use app\index\model\Index as Index;
+use app\index\model\Index as Indexm;
 
 class Index extends Controller
 {
     public function index()
     {
-    	$model = new Index();
+    	$model = new Indexm();
 
     	$result = $model->getCateListDefaule();
 
