@@ -143,6 +143,29 @@
 		    bottom: 130px;
 		    left: 25px;
 		}
+
+		.borderrow {
+			border-radius: 25px;
+			border: 1px solid #000;
+		}
+
+		#center {
+			list-style: none;
+    		margin-left: 20px;
+		}
+		#center li {
+			float: left;
+			margin-left: 50px;
+			border-radius: 25px;
+			border: 1px solid #000;
+		}
+		#center li a {
+			padding: 20px 30px;
+		}
+		.bookstitle {
+		    position: relative;
+		    left: -47%;
+		}
 	</style>
 </head>
 <body>
@@ -161,36 +184,31 @@
 	</div>
 
 	<div class="layui-col-md2" id="left">
+		<!-- {foreach $cate as $key => $value} -->
 	  	<div class="layui-row row">
-			<a>分类</a>
+			<a>{$value['cate_name']}</a>
 	  	</div>
-  		<div class="layui-row row">
-			<a>分类1</a>
-	  	</div>
-	  	<div class="layui-row row">
-			<a>分类2</a>
-	  	</div>
-	  	<div class="layui-row row">
-			<a>分类3</a>
-	  	</div>
-	  	<div class="layui-row row">
-			<a>+</a>
-	  	</div>
+	  	<!-- {/foreach} -->
 	  	<div class="layui-row row end">
 			<a>回收站</a>
 	  	</div>
 	</div>
 
 	<div class="layui-col-md8" id="middle">
-	  	<div class="layui-row row">
-			<a>内容</a>
+		<!-- {foreach $bookmarks as $key => $value} -->
+	  	<div class="layui-row row borderrow">
+			<a class="bookstitle">{$value['cate_name']}</a>
+			<!-- {foreach $value['bookmarks'] as $k => $v} -->
+			<div>
+				<ul id="center">
+					<li>
+						<a href="{$v['book_link']}" title="{$v['book_intro']}" alt="{$v['book_intro']}">{$v['book_name']}</a>
+					</li>
+				</ul>
+			</div>
+  			<!-- {/foreach} -->
 	  	</div>
-	  	<div class="layui-row row">
-			<a>内容1</a>
-	  	</div>
-	  	<div class="layui-row row">
-			<a>内容2</a>
-	  	</div>
+	  	<!-- {/foreach} -->
 	</div>
 
 	<div class="layui-col-md1" id="right">
